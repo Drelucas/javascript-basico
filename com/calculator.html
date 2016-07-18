@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+</head>
+<body>
+  <strong>Calculator</strong>
+  <script>
+    function calculator(a,b,op){
+      if(op==="+"){
+        return a+b;
+      }else if(op==="-"){
+        return a-b;
+      }else if(op==="*"){
+        return a*b;
+      }else{
+        return a/b;
+      }
+    }
+
+    document.write(calculator(5,4,"+"));
+  </script>
+</body>
+</html>

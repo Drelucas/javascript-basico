@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arrays</title>
+</head>
+<body>
+<h1>Arrays in JS</h1>
+<script type="text/javascript">
+  var arr1 = new Array("red",10, 20.4);
+  var arr2 = Array("blue",20, 30.4, arr1);
+  var arr3 = ["orange",30, 40.4, arr1, arr2];
+
+  document.write("<p>Arr1: "+arr1[0]+"</p>");
+  document.write("<p>Arr1: "+arr1[1]+"</p>");
+  document.write("<p>Arr1: "+arr1[2]+"</p>");
+  document.write("<p>Arr1: "+arr1.length+"</p>");
+  document.write("<p>Arr2: "+arr2[0]+"</p>");
+  document.write("<p>Arr2: "+arr2[1]+"</p>");
+  document.write("<p>Arr2: "+arr2[2]+"</p>");
+  document.write("<p>Arr2: "+arr2[3]+"</p>");
+  document.write("<p>Arr2: "+arr2.length+"</p>");
+  document.write("<p>Arr3: "+arr3[0]+"</p>");
+  document.write("<p>Arr3: "+arr3[1]+"</p>");
+  document.write("<p>Arr3: "+arr3[2]+"</p>");
+  document.write("<p>Arr3: "+arr3[3]+"</p>");
+  document.write("<p>Arr3: "+arr3[4]+"</p>");
+  document.write("<p>Arr3: "+arr3.length+"</p>");
+</script>
+
+<h1>Removing elements Arrays in JS</h1>
+<script type="text/javascript">
+  arr1.length = 2;
+
+  document.write("<p>Arr1: "+arr1[0]+"</p>");
+  document.write("<p>Arr1: "+arr1[1]+"</p>");
+  document.write("<p>Arr1: "+arr1[2]+"</p>");
+  document.write("<p>Arr1: "+arr1.length+"</p>");
+</script>
+
+<h1>methods of Arrays in JS</h1>
+<strong>concat() - concatena dois arrays</strong>
+<script type="text/javascript">
+  arr1 = arr1.concat(arr2);
+
+  document.write("<p>Arr1: "+arr1.length+"</p>");
+  console.log(arr1);
+</script>
+
+<strong>join() - separa os elementos</strong>
+<script type="text/javascript">
+  var list = arr1.join(" - ");
+  document.write("<p> "+list+"</p>");
+</script>
+
+<strong>push() - adiciona um elemento ao array</strong>
+<script type="text/javascript">
+  arr3.push("novo elemento");
+  document.write("<p> "+arr3+"</p>");
+</script>
+
+<strong>pop() - remove o ultimo elemento</strong>
+<script type="text/javascript">
+  arr3.pop();
+  document.write("<p> "+arr3+"</p>");
+</script>
+
+<strong>shift() - remove o primeiro elemento</strong>
+<script type="text/javascript">
+
+  arr3.shift();
+  document.write("<p> "+arr3+"</p>");
+</script>
+
+<strong>unshift() - adiciona um elemento no inicio do array</strong>
+<script type="text/javascript">
+
+  arr1.unshift("novo elemento");
+  document.write("<p> "+arr1+"</p>");
+</script>
+
+<strong>slice() - criar objeto a partir de um range de array</strong>
+<script type="text/javascript">
+
+  var arrTeste = [1,2,3,4,5];
+  var arrSlice = arrTeste.slice(1,4);
+  document.write("<p> "+arrSlice+"</p>");
+</script>
+
+<strong>splice() - acrescenta um elemento no indice indicado</strong>
+<script type="text/javascript">
+
+  var arr = [1,2,3,4,5];
+  arr.splice(1,2, "A", "B", "C", "D")
+  document.write("<p> "+arr+"</p>");
+</script>
+
+<strong>reverse() - inverte o array</strong>
+<script type="text/javascript">
+
+  var arr = [1,2,3,4,5];
+  arr.reverse();
+  document.write("<p> "+arr+"</p>");
+</script>
+
+<strong>sort() - ordena um array</strong>
+<script type="text/javascript">
+
+  var arr = [5,8,1,4,2,3,7,6];
+  function desc(a,b){
+    if(a > b){
+      return -1;
+    }
+    if(a < b){
+      return 1;
+    }
+    if(a === b){
+      return 0;
+    }
+  }
+
+  arr.sort();
+  document.write("<p> "+arr+"</p>");
+
+  arr.sort(desc);
+  document.write("<p> "+arr+"</p>");
+</script>
+
+<strong>indexOf() - traz o registro do array</strong>
+<script type="text/javascript">
+
+  var arr = ["orange", "blue", "red", "blue", "green"];
+  var ret = arr.indexOf("blue");
+  document.write("<p> "+ret+"</p>");
+
+  var ret = arr.indexOf("blue",2);
+  document.write("<p> "+ret+"</p>");
+</script>
+
+<strong>lastIndexOf() - traz o registro do array</strong>
+<script type="text/javascript">
+
+  var arr = ["orange", "blue", "red", "blue", "green"];
+  var ret = arr.lastIndexOf("blue");
+  document.write("<p> "+ret+"</p>");
+
+  var ret = arr.lastIndexOf("blue",2);
+  document.write("<p> "+ret+"</p>");
+</script>
+
+</body>
+</html>

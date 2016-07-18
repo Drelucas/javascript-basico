@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search</title>
+</head>
+<body>
+<strong>Search in practice</strong>
+<br/>
+<input type="text" id="search">
+<button onclick="search();">search</button>
+<br/>
+<strong>Result: </strong>
+<br/>
+<span id="result" ></span>
+<script>
+  function search(){
+    var arr = ["Mussum Ipsum","cacilds vidis litro abertis","Cevadis im ampola pa arma uma pindureta", "Per aumento de cachacis","eu reclamis", "Detraxit consequat et quo num tendi nada"];
+    var search = document.getElementById("search").value;
+    var testKey = null;
+    var result = "";
+    for (var key in arr) {
+      var auxArr = arr[key.split(" ")];
+      for (var ke2 in auxArr){
+        if (auxArr.indexOf(search) > -1){
+          if(testKey != key){
+            testKey = key;
+            result += "<p>"+arr[key]+"</p>"
+          }
+        }
+      }
+    }
+    document.getElementById("result").innerHTML = result;
+  }
+</script>
+</body>
+</html>
